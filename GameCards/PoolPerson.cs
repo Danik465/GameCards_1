@@ -41,7 +41,7 @@ namespace GameCards
             Random randCard = new Random();
             var DeckEnemy = new Dictionary<int, Person>();
             Console.WriteLine("Враг выбрал такие карточки:");
-            for (int i = 1; i < 5; i++)
+            for (int i = 1; i <=4; i++)
             {
 
                 DeckEnemy[i] = PoolCards[randCard.Next(1, 11)];
@@ -53,7 +53,7 @@ namespace GameCards
         {
             var DeckHero = new Dictionary<int, Person>();
             Console.WriteLine("Введите номера карты , которые хотите добавить");
-            for (int i = 1; i < 5; i++)
+            for (int i = 1; i <= 4; i++)
             {
 
                 DeckHero[i] = PoolCards[Convert.ToInt32(Console.ReadLine())];

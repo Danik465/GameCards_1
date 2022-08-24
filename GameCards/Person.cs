@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace GameCards
 {
@@ -10,10 +7,12 @@ namespace GameCards
     {
         public Person(int hp, int attack, string name, int index) : base(hp, attack, name, index)
         {
+
         }
         public static void GivenDamege(ref Person person1, ref Person person2)
         {
             person2.HP = person2.HP - person1.Attack;
+            if(person2.HP >= 0)person1.HP = person1.HP - person2.Attack;
 
         }
 
