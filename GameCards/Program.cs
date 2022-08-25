@@ -9,18 +9,18 @@ namespace GameCards
     {
         static void Main(string[] args)
         {
-            var PoolCards = PoolPerson.Input();
-            PoolPerson.PrintDict(PoolCards);
+            var PoolCards = PoolPerson.Input(); // Определяем словарь всех карт
+            PoolPerson.PrintDict(PoolCards);// Выводим его на экран
 
 
-            var DeckHero = PoolPerson.DeckHero(PoolCards);
+            var DeckHero = PoolPerson.DeckHero(PoolCards); // Создаем колоду героя
             Console.Clear();
             
 
-            var DeckEnemy = PoolPerson.DeckEnemy(PoolCards);
+            var DeckEnemy = PoolPerson.DeckEnemy(PoolCards); // Создаем колоду врага
 
 
-            FightLogic.GameLogic(DeckHero, DeckEnemy);
+            FightLogic.GameLogic(DeckHero, DeckEnemy); // Метод игры(не готовый) 
             
 
 

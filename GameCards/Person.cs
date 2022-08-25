@@ -5,18 +5,18 @@ namespace GameCards
 {
     public class Person : Human
     {
-        public Person(int hp, int attack, string name, int index) : base(hp, attack, name, index)
+        public Person(int hp, int attack, string name, int index) : base(hp, attack, name, index) // Наследуемый конструктор класса 
         {
 
         }
-        public static void GivenDamege(ref Person person1, ref Person person2)
+        public static void GivenDamege(ref Person person1, ref Person person2) // Метод получения урона
         {
             person2.HP = person2.HP - person1.Attack;
             if(person2.HP >= 0)person1.HP = person1.HP - person2.Attack;
 
         }
 
-        public static void GameLogic(ref Person person1, ref Person person2)
+        public static void GameLogic(ref Person person1, ref Person person2)  // Пока что не нужный метод
         {
             while (true)
             {

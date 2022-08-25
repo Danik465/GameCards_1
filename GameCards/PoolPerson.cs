@@ -9,7 +9,7 @@ namespace GameCards
     public class PoolPerson
     {
 
-        public static Dictionary<int, Person> Input()
+        public static Dictionary<int, Person> Input() // Метод создания словаря всех карт
         {
             Person Gargoyle = new Person(80, 5, "Gargoyle", 1);
             var Ghoul = new Person(100, 10, "Ghoul", 2);
@@ -36,7 +36,7 @@ namespace GameCards
             return MassPerson;
         }
 
-        public static Dictionary<int, Person> DeckEnemy(Dictionary<int, Person> PoolCards)
+        public static Dictionary<int, Person> DeckEnemy(Dictionary<int, Person> PoolCards) // Метод создания колоды карт врага
         {
             Random randCard = new Random();
             var DeckEnemy = new Dictionary<int, Person>();
@@ -49,10 +49,10 @@ namespace GameCards
             return DeckEnemy;
 
         }
-        public static Dictionary<int, Person> DeckHero(Dictionary<int, Person> PoolCards)
+        public static Dictionary<int, Person> DeckHero(Dictionary<int, Person> PoolCards) // Метод создания колоды карт героя
         {
             var DeckHero = new Dictionary<int, Person>();
-            Console.WriteLine("Введите номера карты , которые хотите добавить");
+            Console.WriteLine("Введите номера карт, которые хотите добавить");
             for (int i = 1; i <= 4; i++)
             {
 
@@ -60,17 +60,18 @@ namespace GameCards
             }
             return DeckHero;
         }
-        public static void PrintDict(Dictionary<int, Person> cards)
+        public static void PrintDict(Dictionary<int, Person> cards) // Вывод на консоль словаря 
         {
             int number = 1;
             for (int i = 1; i < cards.Count + 1; i++)
             {
+               
                 Console.WriteLine($"{number}. {cards[i].Name} - {cards[i]}");
                 number++;
             }
-            Console.WriteLine();
+            
         }
-        public static Person CardEnemy(Dictionary<int, Person> cards)
+        public static Person CardEnemy(Dictionary<int, Person> cards)  // Метод получения карты врага для боя
         {
             Random randCard = new Random();
             var CardEnemy = new Person(0, 0, " ", 0);
